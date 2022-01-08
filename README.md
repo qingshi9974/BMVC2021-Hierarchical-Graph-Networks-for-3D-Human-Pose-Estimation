@@ -43,7 +43,11 @@ ${ROOT}
 
 - Download the annotations file (SMPL parameters from SMPLify-X, Human36M joints, Camera parameters) [[Annotations](https://jbox.sjtu.edu.cn/v/link/view/4266d27ff78c45a3b1f7d73a27258e65)], and unzip annotations file to corresponding directory.
 - All annotation files follow [MS COCO format](https://cocodataset.org/#format-data).
+### Pytorch SMPL and MANO layer
 
+- For the SMPL layer, I used [smplpytorch](https://github.com/gulvarol/smplpytorch). The repo is already included in `${ROOT}/smplpytorch`.
+- Download `basicModel_f_lbs_10_207_0_v1.0.0.pkl`, `basicModel_m_lbs_10_207_0_v1.0.0.pkl`, and `basicModel_neutral_lbs_10_207_0_v1.0.0.pkl` from [here](https://smpl.is.tue.mpg.de/downloads) (female & male) and [here](http://smplify.is.tue.mpg.de/) (neutral) to `${ROOT}/smplpytorch/smplpytorch/native/models`.
+- 
 ### Experiment
 
 The `experiment` directory will be created as below.
