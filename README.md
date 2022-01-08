@@ -31,12 +31,16 @@ The `data` directory structure should follow the below hierarchy.
 ${ROOT}  
 |-- data  
 |   |-- Human36M  
-|   |   |-- images  
 |   |   |-- annotations   
+|   |   |   | -- Human36M_subject1_camera.json
+|   |   |   | -- Human36M_subject1_data.json
+|   |   |   | -- Human36M_subject1_joint_3d.json
+|   |   |   | -- Human36M_subject1_smpl_camera.json
+|   |   |   | -- ....
 |   |   |-- J_regressor_h36m_correct.npy
 ```
 
-- Download Human3.6M SMPL parameters [[SMPL parameters from SMPLify-X](https://drive.google.com/drive/folders/1s-yywb4zF_OOLMmw1rsYh_VZFilgSrrD)]
+- Download the annotations file (SMPL parameters from SMPLify-X, Human36M joints, Camera parameters) [[Annotations](https://jbox.sjtu.edu.cn/v/link/view/4266d27ff78c45a3b1f7d73a27258e65)]
 - All annotation files follow [MS COCO format](https://cocodataset.org/#format-data).
 
 ### Experiment
@@ -49,6 +53,7 @@ ${ROOT}
 |   |   |-- checkpoint  
 |   |   |-- graph 
 |   |   |-- vis 
+```
 
 - `experiment` contains train/test results of Pose2Mesh on various benchmark datasets.
 We recommed you to create the folder as a soft link to a directory with large storage capacity.
@@ -62,11 +67,12 @@ Default timezone is UTC+9, but you can set to your local time.
 - `graph` contains visualized train logs of error and loss. 
 
 ### Pretrained model weights
-Download pretrained model weights from [here](https://drive.google.com/drive/folders/1HayITLQYf6d43ksShRYF3CU6KDKd84Kn?usp=sharing) to a corresponding directory.
+The pretrained model weights corresponding to the best model when Ground-Truth 2D keypoints are used as input, which can achieve the best results in MPJPE (37.32mm).
 ```
 ${ROOT}  
-|-- experiment  
-|   |-- HGN_human36J_train_human36 
+|-- pretrained
+|   |-- final.pth.tar
+```
 
 ## Running Pose2Mesh
 
