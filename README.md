@@ -1,7 +1,7 @@
 # HGN: Hierarchical Graph Networks for 3D Human Pose Estimation
 
 ## Introduction
-This repository is the offical [Pytorch](https://pytorch.org/) implementation of [Hierarchical Graph Networks for 3D Human Pose Estimation (BMVC 2021)](https://arxiv.org/abs/2111.11927).
+This repository is the offical [Pytorch](https://pytorch.org/) implementation of [Hierarchical Graph Networks for 3D Human Pose Estimation (BMVC 2021)](https://arxiv.org/abs/2111.11927).  Because the forms of detected 2d keypoints and ground truth 2d keypoints are quite different, we only give the training and test code when using ground truth 2d keypoints as input.
 
 ## Install guidelines
 - We recommend you to use an [Anaconda](https://www.anaconda.com/) virtual environment. Install [PyTorch](https://pytorch.org/) >= 1.2 according to your GPU driver and Python >= 3.7.2, and run `sh requirements.sh`. 
@@ -80,7 +80,8 @@ ${ROOT}
 ### Start
 ### Train
 
-you can run the 
+you can run the below command to train the model with Human36M dataset. We choose the Adam optimizer with the learning rate initialized to
+0.001 and decayed by 0.9 per 20 epochs. We train each model for 100 epochs using a mini-batch size of 64.
 ```
 python main/train.py --gpu 0,1 --cfg ./asset/yaml/HGN_human36J_train_human36.yml
 ```
