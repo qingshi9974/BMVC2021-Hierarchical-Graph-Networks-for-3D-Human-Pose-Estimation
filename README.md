@@ -18,6 +18,7 @@ ${ROOT}
 |-- lib
 |-- experiment
 |-- main
+|-- pretrained
 |-- smplpytorch
 ```
 - `data` contains data loading codes and soft links to images and annotations directories.
