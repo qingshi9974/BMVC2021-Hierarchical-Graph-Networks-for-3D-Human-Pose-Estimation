@@ -37,10 +37,11 @@ ${ROOT}
 |   |   |   | -- Human36M_subject1_joint_3d.json
 |   |   |   | -- Human36M_subject1_smpl_camera.json
 |   |   |   | -- ....
+|   |   |   | -- Human36M_subject13_smpl_camera.json
 |   |   |-- J_regressor_h36m_correct.npy
 ```
 
-- Download the annotations file (SMPL parameters from SMPLify-X, Human36M joints, Camera parameters) [[Annotations](https://jbox.sjtu.edu.cn/v/link/view/4266d27ff78c45a3b1f7d73a27258e65)]
+- Download the annotations file (SMPL parameters from SMPLify-X, Human36M joints, Camera parameters) [[Annotations](https://jbox.sjtu.edu.cn/v/link/view/4266d27ff78c45a3b1f7d73a27258e65)], and unzip annotations file to corresponding directory.
 - All annotation files follow [MS COCO format](https://cocodataset.org/#format-data).
 
 ### Experiment
@@ -79,12 +80,12 @@ ${ROOT}
 ### Start
 ### Train
 
-Run
+you can run the 
 ```
 python main/train.py --gpu 0,1 --cfg ./asset/yaml/HGN_human36J_train_human36.yml
 ```
 ### Test
-Select the config file in ${ROOT}/asset/yaml/ and test. You can change the pretrained model weight, the default path of pretrained model weight is './pretrained'. To save sampled outputs to obj files, change TEST.vis value to True in the config file.
+Select the config file in ${ROOT}/asset/yaml/ and test. You can change the pretrained model weight, the default path of pretrained model weight is ${ROOT}/pretrained/'. To save sampled outputs to obj files, change TEST.vis value to True in the config file.
 Run
 ```
 python main/test.py --gpu 0,1 --cfg ./asset/yaml/HGN_human36J_test_human36.yml
