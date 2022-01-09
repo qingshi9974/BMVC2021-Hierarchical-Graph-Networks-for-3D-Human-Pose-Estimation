@@ -80,7 +80,7 @@ ${ROOT}
 |   |-- final.pth.tar
 ```
 
-## Running Pose2Mesh
+## Running 
 
 ### Start
 ### Train
