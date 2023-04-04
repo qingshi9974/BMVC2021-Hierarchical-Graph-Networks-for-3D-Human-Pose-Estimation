@@ -1,0 +1,29 @@
+DATASET:
+    train_list: ['Human36M']
+    test_list: ['Human36M']
+    input_joint_set: 'human36'
+    target_joint_set: 'human36'
+    workers: 16
+    use_gt_input: True
+
+
+
+TRAIN:
+    print_freq: 10
+    batch_size: 64
+    shuffle: True
+    begin_epoch: 0
+    end_epoch: 150
+    scheduler: 'step'
+    lr: 0.001
+    lr_step: [20,40,60,80,100,120,140]
+    lr_factor: 0.9
+    optimizer: 'adam'
+
+AUG:
+    flip: False
+    rotate_factor: 0
+
+TEST:
+    batch_size: 64
+    shuffle: False
