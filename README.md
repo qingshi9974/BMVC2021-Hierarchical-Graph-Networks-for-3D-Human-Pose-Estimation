@@ -106,7 +106,7 @@ python main/test.py --gpu 0,1 --cfg ./asset/yaml/HGN_human36J_test_human36.yml
 
 ### HGN
 
-If you find PoseFormerV2 useful in your research, please consider citing:
+If you find HFN useful in your research, please consider citing:
 
 ```bibtex
 @inproceedings{
